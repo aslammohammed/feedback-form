@@ -1,5 +1,5 @@
 # feedback-form
-This is a sample feedback form.
+This is an animated (pop up/down) sample feedback form.
 
 ### How to use it? ###
 1. Clone into your machine
