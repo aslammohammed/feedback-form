@@ -1,0 +1,19 @@
+{
+  "name": "msp-basic-scriptapp",
+  "version": "1.0.0",
+  "description": "This boilerplate can be used to develop HTML/CSS/JS script applications for HCL DX Websphere Portal.",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "start:server": "live-server --port=30016",
+    "start": "npm-run-all --parallel start:server watch:sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HCL Software",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "patron-css-build": "git+https://github01.hclpnp.com/UXUIAssets/patron-css-build.git"
+  }
+}

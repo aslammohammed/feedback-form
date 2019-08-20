@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MSP Basic Script Application</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="node_modules/patron-css-build/dist/patron-style.css"
+    />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="hcl-container">
+      <div class="hcl-row" style="float: right;">
+       
+        <div class="hcl-col" >
+          <script >
+            function toggle(e){
+              //window.alert('clicked');
+              console.log(e.value);
+              var form = document.getElementById("feedback2");
+              //e.value=='close'?form.classList.add("show"):form.classList.remove('show');
+              form.classList.toggle("show");
+              
+              
+              var btn = document.getElementById('btnFeedback');
+              e.value=='close'?btn.value='open':btn.value='close';
+              
+            }
+            function submit(e){
+              var content = document.getElementById("feedbackContent");
+              var thanks = document.getElementById("feedbackThanks");
+              content.hidden = true;
+              thanks.hidden = false;
+            }    
+          </script> 
+          <div class="feedbackSection">
+            <div class="form-style-5" id="feedback2">
+                <form>
+                  <div class="header">
+                      <p><b>We would like to hear from you</b> </p> 
+                  </div>
+                  <div id="feebackContent" class="content">
+                    
+                      <fieldset>
+                        <input type="text" name="field1" placeholder="Your Name *">
+                        <input type="email" name="field2" placeholder="Your Email *">
+                        <textarea name="field3" rows="6" placeholder="Any feedback?"></textarea>  
+                        <label>How would you rate our website?</label>
+                          <span class="fa fa-heart"></span>
+                          <span class="fa fa-heart"></span>
+                          <span class="fa fa-heart"></span>
+                          <span class="fa fa-heart-o"></span>
+                          <span class="fa fa-heart-o"></span>
+                        <br/>
+                        <input type="submit" value="Submit" onclick="submit()" />
+                          
+                      </fieldset>    
+                  </div>
+                  <div id="feedbackThanks" class="thanks" hidden>
+                    <span class="fa fa-check-square"></span>
+                    <br/>
+                    Thank you!
+                        
+                  </div>      
+                </form>
+            </div>
+            <button id="btnFeedback" onclick="toggle(this)" value="close">Feedback</button>
+
+          </div> 
+            
+        </div>
+      </div>
+      
+    </div>
+    <script src="node_modules/patron-css-build/dist/patron-style.js"></script>
+  </body>
+</html>
